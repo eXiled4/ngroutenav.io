@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   { path: '', component: FirstComponent, pathMatch: 'full' },
-  { path: 'rabble', component: FirstComponent },
+  { path: 'rabble', canActivate:[AuthGuard], component: FirstComponent },
   { path: 'ribble/:id', component: SecondComponent }
 ];
 
@@ -28,3 +29,9 @@ export class AppRoutingModule { }
 // Continue to second component tx file ...
 
 // NOTE - in above eg, MUST enter the ID or else, using only 'ribble as path WILL NOT WORK
+
+// ACTIVATING ANGULAR ROUTES USING GUARDS
+// Use CLI COMMAND:
+// ng g guard Auth
+// Then select canActivate (the default)
+// This function determines is they are authenticated to view the page or not
