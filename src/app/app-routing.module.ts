@@ -8,3 +8,6 @@ const routes: Routes = [];
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+// To configure routing, search for this file app-routig.module.ts
+// in line 4 - the const routes: Routes = [];
