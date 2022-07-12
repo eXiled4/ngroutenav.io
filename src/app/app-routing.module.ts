@@ -35,3 +35,10 @@ export class AppRoutingModule { }
 // ng g guard Auth
 // Then select canActivate (the default)
 // This function determines is they are authenticated to view the page or not
+
+
+// PROTECTING ANGULAR ROUTES USING GUARDS
+// Use CLI Command
+// ng g s INSERTNAMEHERE
+//      the s means service
+//
